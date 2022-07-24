@@ -1,0 +1,17 @@
+.textArea {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    outline: none;
+    max-width: 80vw;
+}
+
+.backButton{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContainer{
+    margin-bottom: 50px;
+    z-index: 1;
+}

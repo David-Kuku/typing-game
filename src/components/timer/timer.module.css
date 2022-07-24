@@ -1,0 +1,24 @@
+.countdownTimer {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+
+    font-family: "Oswald";
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.countdownTimerSpan {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.twoNumbers {
+    width: 2ch;
+    margin-left: 5px;
+    margin-right: 5px;
+}

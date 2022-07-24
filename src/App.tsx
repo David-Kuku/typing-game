@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import { AppContextProvider } from './context/context';
+import HomeScreen from './pages/homeScreen/HomeScreen';
+import TestScreen from './pages/testScreen/TestScreen';
+import { TOption } from './types/types';
+import { WebsiteParagraph } from './utils/mock';
 
-function App() {
+const App = () => {
+
+  const [wordList, setWordList] = useState(WebsiteParagraph)
+  const [isTimeOver, setIsTimeOver] = useState(false)
+  const [testDuration, setTestDuration] = useState(0)
+  const [userScore, setUserScore] = useState(0)
+  const [userOption, setUserOption] = useState<TOption>('')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppContextProvider
+        value={{
+          wordList,
+          setWordList,
+          timeElapsed: isTimeOver,
+          setTimeElapsed: setIsTimeOver,
+          setTestDuration,
+          testDuration,
+          userScore,
+          setUserScore,
+          setUserOption,
+          userOption
+        }}>
+        <Router>
+          <Routes>
+            <Route path='/' element={<HomeScreen />} />
+            <Route path='/test-screen' element={<TestScreen />} />
+          </Routes>
+        </Router>
+      </AppContextProvider>
+
     </div>
   );
 }

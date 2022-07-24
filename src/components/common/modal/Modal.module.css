@@ -1,0 +1,45 @@
+.modalBackground {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(200, 200, 200, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+  
+.modalContainer {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+  
+.modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    color: crimson;
+}
+  
+.modalContainer .body {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.userScore {
+    font-size: 29px;
+    color: green;
+}
+

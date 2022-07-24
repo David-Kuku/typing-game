@@ -1,0 +1,25 @@
+.button {
+    border: 1px solid ;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    transition: transform .3s; /* Animation */
+    min-width: 100px;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.whiteBg {
+    color: #6645F4;
+    border: 1px solid #6645F4;
+    background-color: white;
+}
+
+.filledBg {
+    background-color: #6645F4;
+    color: white;
+}
