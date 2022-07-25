@@ -42,11 +42,11 @@ const CountdownTimer = ({ countdownTimestampMs, setTimeOver }: TProps) => {
             {
                 remainingTime !== "FINISHED" ?
 
-                    <>
+                    <div data-testid="time">
                         <span className={styles.twoNumbers}>{remainingTime.minutes}</span>
                         <span>:</span>
                         <span className={styles.twoNumbers}>{remainingTime.seconds}</span>
-                    </>
+                    </div>
                     :
                     <>
                         <span className={styles.twoNumbers}>00</span>

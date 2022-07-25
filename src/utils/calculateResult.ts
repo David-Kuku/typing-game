@@ -1,24 +1,24 @@
 
 type TArgs = {
-    value: string;
+    testWords: string;
     userText: string;
     setUserScore: (val: number) => void
 }
 
-export const calculateResult = ({ setUserScore, userText, value }: TArgs) => {
-    const testArray = new Set(value.split(/[.,!,?,;,...," "]/))
+export const calculateResult = ({ setUserScore, userText, testWords }: TArgs) => {
+    const testArray = new Set(testWords.split(/[.,!,?,;,...," "]/))
     const userTextArray = new Set(userText.split(/[.,!,?,;,...," "]/))
 
-    console.log({testArray})
-    console.log({userTextArray})
     let res = 0
     userTextArray.forEach((str: string) => {
         if (str && testArray.has(str)) {
             res += 1
         }
     })
-
+    
     setUserScore(res)
+
+    return res
 
 }
 

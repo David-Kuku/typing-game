@@ -20,7 +20,7 @@ const TestInput = ({ isTimeOver }: TProps) => {
 
     useEffect(() => {
         if (isTimeOver) {
-            calculateResult({ setUserScore, userText, value: wordList })
+            calculateResult({ setUserScore, userText, testWords: wordList })
         }
     }, [isTimeOver])
 

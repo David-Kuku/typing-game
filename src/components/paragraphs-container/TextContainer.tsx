@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import TextParagraph from './TextParagraph'
 import styles from './testParagraph.module.css'
-import Modal from '../common/modal/modal'
+import Modal from '../common/modal/Modal'
 import { useAppContext } from '../../context/context'
 
 

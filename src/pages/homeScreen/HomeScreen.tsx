@@ -6,7 +6,6 @@ import styles from './Homescreen.module.css'
 function HomeScreen() {
     const { setUserOption, setWordList } = useAppContext()
 
-    // const testDurationInTimeStamp = testDuration * 60 * 1000
     return (
 
         <div className={styles.container}>
@@ -29,28 +28,7 @@ function HomeScreen() {
                 </div>
             </div>
         </div>
-        // <div className={styles.container}>
-        //     {testDuration ?
-        //         (
-        //             <div className={styles.timer}>
-        //                 <Timer
-        //                     countdownTimestampMs={Date.now() + testDurationInTimeStamp}
-        //                     setTimeOver={setTimeElapsed}
-        //                 />
-        //             </div>
-        //         ) : <></>
-        //     }
-        //     <div>
-        //         <TextContainer />
-        //         {testDuration ?
-        //             (<TestInput
-        //                 isTimeOver={timeElapsed}
-        //             />
-        //             ) : <></>
-        //         }
-        //     </div>
-
-        // </div>
+  
     )
 }
 
